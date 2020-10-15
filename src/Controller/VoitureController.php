@@ -1,10 +1,11 @@
 <?php
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
-class VoitureController
+class VoitureController extends AbstractController
 {
     /**
      * @Route("/voitures",name="voiture.index")
@@ -12,6 +13,8 @@ class VoitureController
      */
     public function index(): Response
     {
-        return new Response('les voitures');
+        return $this->render("Voiture/index.html.twig",[
+            'current_menu' => 'voitures'
+            ]);
     }
 }
