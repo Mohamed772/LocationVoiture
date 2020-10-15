@@ -19,11 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="Premiere page">
+      <change afterPath="$PROJECT_DIR$/src/Controller/VoitureController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,8 +169,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602668951248</updated>
-      <workItem from="1602668952529" duration="2325000" />
+      <workItem from="1602668952529" duration="7765000" />
     </task>
+    <task id="LOCAL-00001" summary="Premiere page">
+      <created>1602672247151</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602672247151</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,18 +195,27 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Premiere page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Premiere page" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="320" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602669513496">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="320" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.814@0.23.1440.814" timestamp="1602669513496" />
-    <state x="539" y="360" key="NewPhpFileDialog" timestamp="1602671074123">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state x="539" y="365" key="NewPhpFileDialog" timestamp="1602749046989">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="539" y="360" key="NewPhpFileDialog/0.23.1440.814@0.23.1440.814" timestamp="1602671074123" />
+    <state x="539" y="365" key="NewPhpFileDialog/0.23.1440.825@0.23.1440.825" timestamp="1602749046989" />
     <state x="221" y="69" key="SettingsEditor" timestamp="1602668975771">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="221" y="69" key="SettingsEditor/0.23.1440.814@0.23.1440.814" timestamp="1602668975771" />
+    <state x="518" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602672218705">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="518" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1602672218705" />
   </component>
 </project>
