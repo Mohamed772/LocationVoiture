@@ -19,6 +19,31 @@ class VoitureRepository extends ServiceEntityRepository
         parent::__construct($registry, Voiture::class);
     }
 
+    /**
+     * @return Voiture[]
+     */
+    public function findAllVisible(): array
+    {
+        return $this->createQueryBuilder('v')
+            ->Where('v.location = :val')
+            ->setParameter('val', 'Disponible')
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @return Voiture[]
+     */
+    public function finLastest(): array
+    {
+        return $this->createQueryBuilder('v')
+            ->Where('v.location = :val')
+            ->setParameter('val', 'Disponible')
+            ->setMaxResults(4)
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Voiture[] Returns an array of Voiture objects
     //  */
@@ -47,4 +72,5 @@ class VoitureRepository extends ServiceEntityRepository
         ;
     }
     */
+
 }

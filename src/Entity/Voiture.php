@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+
 use App\Repository\VoitureRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -10,6 +11,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Voiture
 {
+    const MOTEUR=[
+        0=> 'thermique',
+        1=> 'electrique',
+        2=> 'Hybride'
+    ];
+
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
