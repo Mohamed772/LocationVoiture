@@ -33,10 +33,26 @@ class VoitureController extends AbstractController
      */
     public function index(): Response
     {
-
-
         return $this->render("Voiture/index.html.twig",[
             'current_menu' => 'voitures'
             ]);
+    }
+
+    /**
+     * @route ("/voitures/{slug}-{id}", name="voiture.show", requirements={"slug": "[a-z0-9\-]*"})
+     * @return Response
+     */
+    public function show($slug,Voiture $voiture): Response
+    {
+        if ($voiture->getSlug() !== $slug){
+            return $this->redirectToRoute('voiture.show', [
+                'id' => $voiture->getId(),
+                'slug' => $voiture->getSlug()
+            ], 301);
+        }
+        return $this->render("Voiture/show.html.twig",[
+            'voiture'=> $voiture,
+            'current_menu' => 'voitures'
+        ]);
     }
 }

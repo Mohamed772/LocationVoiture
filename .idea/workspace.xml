@@ -20,8 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="Premiere page">
+      <change afterPath="$PROJECT_DIR$/public/photos/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LocationVoiture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LocationVoiture.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/VoitureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/VoitureController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Voiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Voiture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VoitureRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VoitureRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Voiture/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Voiture/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,15 +153,19 @@
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
     </include_path>
   </component>
   <component name="ProjectId" id="1irc3MdvIoUW3KQFzEdg2aebEPA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -174,7 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602668951248</updated>
       <workItem from="1602668952529" duration="16754000" />
-      <workItem from="1602975684328" duration="1852000" />
+      <workItem from="1602975684328" duration="7770000" />
     </task>
     <task id="LOCAL-00001" summary="Premiere page">
       <created>1602672247151</created>
@@ -202,6 +215,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Premiere page" />
     <option name="LAST_COMMIT_MESSAGE" value="Premiere page" />
   </component>
@@ -210,6 +224,10 @@
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="320" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.814@0.23.1440.814" timestamp="1602669513496" />
+    <state x="458" y="192" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603048430198">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="458" y="192" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.821@0.23.1440.821" timestamp="1603048430198" />
     <state x="539" y="365" key="NewPhpFileDialog" timestamp="1602749046989">
       <screen x="0" y="23" width="1440" height="825" />
     </state>

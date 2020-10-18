@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Voiture;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use http\Env\Response;
 
 /**
  * @method Voiture|null find($id, $lockMode = null, $lockVersion = null)
@@ -39,10 +40,12 @@ class VoitureRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('v')
             ->Where('v.location = :val')
             ->setParameter('val', 'Disponible')
-            ->setMaxResults(4)
+            ->setMaxResults(10)
             ->getQuery()
             ->getResult();
     }
+
+
 
     // /**
     //  * @return Voiture[] Returns an array of Voiture objects

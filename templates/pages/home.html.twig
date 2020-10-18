@@ -14,12 +14,12 @@
         <h2>Les dernières voitures</h2>
         <div class="row flex">
         {% for voiture in voitures %}
-            <div class="col-3">
+            <div class="col-3 mt-3">
                 <div class="card">
                     <img src="{{ asset(voiture.photo) }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a href="#">{{ voiture.intitule }}</a>
+                            <a href="{{ path('voiture.show' , {id: voiture.id, slug: voiture.slug}) }}">{{ voiture.intitule }}</a>
                         </h5>
                         <p class="card-text">{{ voiture.moteurType }} {{ voiture.vitesseType }}</p>
                         <div class="text-primary">{{ voiture.location }}</div>

@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-
+use Cocur\Slugify\Slugify;
 use App\Repository\VoitureRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -69,6 +69,11 @@ class Voiture
         $this->intitule = $intitule;
 
         return $this;
+    }
+
+    public function getSlug() : string
+    {
+        return (new Slugify())->slugify($this->intitule);
     }
 
     public function getMoteur(): ?int
