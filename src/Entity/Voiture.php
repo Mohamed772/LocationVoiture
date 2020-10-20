@@ -5,6 +5,7 @@ namespace App\Entity;
 use Cocur\Slugify\Slugify;
 use App\Repository\VoitureRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=VoitureRepository::class)
@@ -22,6 +23,7 @@ class Voiture
     ];
 
 
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -30,6 +32,7 @@ class Voiture
     private $id;
 
     /**
+     * @Assert\Length(min=3,max=250)
      * @ORM\Column(type="string", length=255)
      */
     private $intitule;
@@ -47,12 +50,22 @@ class Voiture
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $location;
+    private $etat;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $photo;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $disponible;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $constructeur;
 
     public function getId(): ?int
     {
@@ -110,14 +123,14 @@ class Voiture
     return self::VITESSE[$this->vitesse];
     }
 
-    public function getLocation(): ?string
+    public function getEtat(): ?string
     {
-        return $this->location;
+        return $this->etat;
     }
 
-    public function setLocation(string $location): self
+    public function setEtat(string $etat): self
     {
-        $this->location = $location;
+        $this->etat = $etat;
 
         return $this;
     }
@@ -130,6 +143,37 @@ class Voiture
     public function setPhoto(string $photo): self
     {
         $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getDisponible(): ?bool
+    {
+        return $this->disponible;
+    }
+
+    public function setDisponible(bool $disponible): self
+    {
+        $this->disponible = $disponible;
+
+        return $this;
+    }
+    public function toStringDisponible(): string
+    {
+        if ($this->disponible)
+        {return 'Disponible';}
+        else return 'Indisponible';
+
+    }
+
+    public function getConstructeur(): ?string
+    {
+        return $this->constructeur;
+    }
+
+    public function setConstructeur(string $constructeur): self
+    {
+        $this->constructeur = $constructeur;
 
         return $this;
     }

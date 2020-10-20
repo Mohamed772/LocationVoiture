@@ -26,8 +26,8 @@ class VoitureRepository extends ServiceEntityRepository
     public function findAllVisible(): array
     {
         return $this->createQueryBuilder('v')
-            ->Where('v.location = :val')
-            ->setParameter('val', 'Disponible')
+            ->Where('v.disponible = :val')
+            ->setParameter('val', true)
             ->getQuery()
             ->getResult();
     }
@@ -38,8 +38,8 @@ class VoitureRepository extends ServiceEntityRepository
     public function finLastest(): array
     {
         return $this->createQueryBuilder('v')
-            ->Where('v.location = :val')
-            ->setParameter('val', 'Disponible')
+            ->Where('v.disponible = :val')
+            ->setParameter('val', true)
             ->setMaxResults(10)
             ->getQuery()
             ->getResult();

@@ -13,6 +13,7 @@ class VoitureType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('constructeur')
             ->add('intitule')
             ->add('moteur', ChoiceType::class, [
                 'choices' => $this->getMoteurChoices()
@@ -20,8 +21,11 @@ class VoitureType extends AbstractType
             ->add('vitesse', ChoiceType::class, [
                 'choices' => $this->getVitessChoices()
             ])
-            ->add('location')
+            ->add('etat', ChoiceType::class, [
+        'choices' => ['Opérationnel' => 'Opérationnel', 'En-révision'=>'En-révision']
+    ])
             ->add('photo')
+            ->add('disponible')
         ;
     }
 

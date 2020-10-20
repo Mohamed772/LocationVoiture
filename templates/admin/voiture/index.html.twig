@@ -21,7 +21,7 @@
             <tbody>
             {% for voiture in voitures %}
             <tr>
-                <td>{{ voiture.intitule }}</td>
+                <td> <a href="{{ path('voiture.show',{id:voiture.id, slug:voiture.slug}) }}">{{ voiture.constructeur ~ ' ' ~ voiture.intitule }}</a></td>
                 <td>
                     <a href="{{ path('admin.voiture.edit', {id: voiture.id}) }}" class="btn btn-primary">Editer</a>
                     <form method="POST" action="{{ path('admin.voiture.delete', {id: voiture.id}) }}"
