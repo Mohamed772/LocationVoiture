@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Voiture;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,8 +14,12 @@ class VoitureType extends AbstractType
     {
         $builder
             ->add('intitule')
-            ->add('moteur')
-            ->add('vitesse')
+            ->add('moteur', ChoiceType::class, [
+                'choices' => $this->getMoteurChoices()
+            ])
+            ->add('vitesse', ChoiceType::class, [
+                'choices' => $this->getVitessChoices()
+            ])
             ->add('location')
             ->add('photo')
         ;
@@ -25,5 +30,25 @@ class VoitureType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Voiture::class,
         ]);
+    }
+
+    private function getMoteurChoices()
+    {
+        $choices = Voiture::MOTEUR;
+        $output = [];
+        foreach($choices as $c => $v){
+            $output[$v] = $c;
+        }
+        return $output;
+    }
+
+    private function getVitessChoices()
+    {
+        $choices = Voiture::VITESSE;
+        $output = [];
+        foreach($choices as $c => $v){
+            $output[$v] = $c;
+        }
+        return $output;
     }
 }
