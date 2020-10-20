@@ -1,23 +1,22 @@
 <?php
 namespace App\Controller;
 
+use App\Repository\VoitureRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 
-class HomeController
+class HomeController extends AbstractController
 {
     /**
-     * @var Environment
+     * @Route("/",name="home")
+     * @param VoitureRepository $repository
+     * @return Response
      */
-    private $twig;
-
-    public function __construct(Environment $twig)
+    public function index(VoitureRepository $repository): Response
     {
-        $this->twig = $twig;
-    }
-
-    public function index(): Response
-    {
-        return new Response($this->twig->render('pages/home.html.twig'));
+        $voitures = $repository->finLastest();
+        return $this->render('pages/home.html.twig',['voitures'=>$voitures]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Cocur\Slugify\Slugify;
 use App\Repository\VoitureRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -10,6 +11,17 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Voiture
 {
+    const MOTEUR=[
+        0=> 'Thermique',
+        1=> 'Electrique',
+        2=> 'Hybride'
+    ];
+    const VITESSE=[
+        0=> 'Manuelle',
+        1=> 'Automatique'
+    ];
+
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -59,6 +71,11 @@ class Voiture
         return $this;
     }
 
+    public function getSlug() : string
+    {
+        return (new Slugify())->slugify($this->intitule);
+    }
+
     public function getMoteur(): ?int
     {
         return $this->moteur;
@@ -71,6 +88,11 @@ class Voiture
         return $this;
     }
 
+    public function getMoteurType(): string
+    {
+        return self::MOTEUR[$this->moteur];
+    }
+
     public function getVitesse(): ?int
     {
         return $this->vitesse;
@@ -81,6 +103,11 @@ class Voiture
         $this->vitesse = $vitesse;
 
         return $this;
+    }
+
+    public function getVitesseType(): string
+    {
+    return self::VITESSE[$this->vitesse];
     }
 
     public function getLocation(): ?string
