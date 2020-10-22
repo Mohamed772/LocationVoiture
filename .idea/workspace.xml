@@ -19,11 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="">
+    <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="users">
+      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f90b8fba-48b2-4c20-9c1c-094016973286.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f90b8fba-48b2-4c20-9c1c-094016973286.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +165,8 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -188,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602672247151</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="users">
+      <created>1603356128146</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603356128146</updated>
+    </task>
+    <task id="LOCAL-00003" summary="users">
+      <created>1603356310864</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603356310864</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,14 +229,19 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Premiere page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Premiere page" />
+    <MESSAGE value="users" />
+    <option name="LAST_COMMIT_MESSAGE" value="users" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603356028151">
+    <state x="320" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603356342375">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="320" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.814@0.23.1440.814" timestamp="1602669513496" />
-    <state x="320" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.823@0.23.1440.823" timestamp="1603356028151" />
+    <state x="320" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.823@0.23.1440.823" timestamp="1603356342375" />
+    <state x="522" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1603357277568">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="522" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.823@0.23.1440.823" timestamp="1603357277567" />
     <state x="456" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603186667078">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
@@ -225,16 +250,29 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="458" y="192" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.821@0.23.1440.821" timestamp="1603048430198" />
-    <state x="539" y="366" key="NewPhpFileDialog" timestamp="1603117691248">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="143" y="90" key="DiffContextDialog" timestamp="1603356170065">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="143" y="90" key="DiffContextDialog/0.23.1440.823@0.23.1440.823" timestamp="1603356170065" />
+    <state x="307" y="172" key="IDE.errors.dialog" timestamp="1603360665259">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="307" y="172" key="IDE.errors.dialog/0.23.1440.823@0.23.1440.823" timestamp="1603360665259" />
+    <state x="539" y="364" key="NewPhpFileDialog" timestamp="1603357550857">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="539" y="360" key="NewPhpFileDialog/0.23.1440.814@0.23.1440.814" timestamp="1602671074123" />
+    <state x="539" y="364" key="NewPhpFileDialog/0.23.1440.823@0.23.1440.823" timestamp="1603357550857" />
     <state x="539" y="365" key="NewPhpFileDialog/0.23.1440.825@0.23.1440.825" timestamp="1602749046989" />
     <state x="539" y="366" key="NewPhpFileDialog/0.23.1440.827@0.23.1440.827" timestamp="1603117691248" />
     <state x="221" y="69" key="SettingsEditor" timestamp="1602668975771">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="221" y="69" key="SettingsEditor/0.23.1440.814@0.23.1440.814" timestamp="1602668975771" />
+    <state x="319" y="170" key="Vcs.Push.Dialog.v2" timestamp="1603356171686">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="319" y="170" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1603356171686" />
     <state x="624" y="314" width="471" height="387" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1603356003286">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
@@ -247,10 +285,11 @@
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="518" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1602672218705" />
-    <state x="343" y="101" width="870" height="674" key="find.popup" timestamp="1603187849108">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="343" y="101" width="870" height="673" key="find.popup" timestamp="1603360409904">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="343" y="85" width="718" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1603120066323" />
+    <state x="343" y="101" width="870" height="673" key="find.popup/0.23.1440.823@0.23.1440.823" timestamp="1603360409904" />
     <state x="343" y="101" width="870" height="674" key="find.popup/0.23.1440.825@0.23.1440.825" timestamp="1603187849108" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1602969854707">
       <screen x="0" y="23" width="1440" height="826" />
