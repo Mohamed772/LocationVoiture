@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="users">
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LocationVoiture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LocationVoiture.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +153,8 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1irc3MdvIoUW3KQFzEdg2aebEPA" />
@@ -277,19 +282,20 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="624" y="314" width="471" height="387" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.23.1440.823@0.23.1440.823" timestamp="1603356003286" />
-    <state x="458" y="242" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1603045389565">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state x="458" y="243" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1603362162330">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="458" y="242" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.23.1440.821@0.23.1440.821" timestamp="1603045389565" />
+    <state x="458" y="243" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.23.1440.823@0.23.1440.823" timestamp="1603362162330" />
     <state x="518" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602672218705">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="518" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1602672218705" />
-    <state x="343" y="101" width="870" height="673" key="find.popup" timestamp="1603360409904">
+    <state x="343" y="101" width="870" height="673" key="find.popup" timestamp="1603361617977">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="343" y="85" width="718" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1603120066323" />
-    <state x="343" y="101" width="870" height="673" key="find.popup/0.23.1440.823@0.23.1440.823" timestamp="1603360409904" />
+    <state x="343" y="101" width="870" height="673" key="find.popup/0.23.1440.823@0.23.1440.823" timestamp="1603361617977" />
     <state x="343" y="101" width="870" height="674" key="find.popup/0.23.1440.825@0.23.1440.825" timestamp="1603187849108" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1602969854707">
       <screen x="0" y="23" width="1440" height="826" />
