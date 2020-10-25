@@ -31,10 +31,12 @@ class VoitureController extends AbstractController
      * @Route("/voitures",name="voiture.index")
      * @return Response
      */
-    public function index(): Response
+    public function index(VoitureRepository $repository): Response
     {
+        $voitures = $repository->findAllVisible();
         return $this->render("Voiture/index.html.twig",[
-            'current_menu' => 'voitures'
+            'current_menu' => 'voitures',
+            'voitures'=>$voitures
             ]);
     }
 

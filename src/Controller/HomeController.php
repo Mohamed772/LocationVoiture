@@ -19,4 +19,5 @@ class HomeController extends AbstractController
         $voitures = $repository->finLastest();
         return $this->render('pages/home.html.twig',['voitures'=>$voitures]);
     }
+
 }

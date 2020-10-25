@@ -10,5 +10,24 @@
             Dix-neuf fois sur vingt, était divisé par une grille, mais sur le palier des êtres raisonnables. Peut être au pistolet et aux armes, dont l'oeil a de la gorge. Approchez votre fauteuil et passez-moi mon violon, comme si un nouveau soleil poussait sa frange au-dessus de l'écurie s'habillaient, ainsi que les deux hommes, techniciens ou savants, prenaient la fuite devant une légion de mille-pattes.
         </p>
     </div>
+    <div class="container">
+        <div class="row flex">
+            {% for voiture in voitures %}
+                <div class="col-3">
+                    <div class="card">
+                        <img src="{{ asset(voiture.photo) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="{{ path('voiture.show',{id:voiture.id, slug:voiture.slug}) }}">{{ voiture.constructeur ~ ' ' ~ voiture.intitule }}</a>
+                            </h5>
+                            <p class="card-text">{{ voiture.moteurType }} {{ voiture.vitesseType }}</p>
+                            <div class="text-primary">{{ voiture.etat }}</div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
 
+
+    </div>
 {% endblock  %}

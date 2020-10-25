@@ -40,7 +40,7 @@ class VoitureRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('v')
             ->Where('v.disponible = :val')
             ->setParameter('val', true)
-            ->setMaxResults(10)
+            ->setMaxResults(4)
             ->getQuery()
             ->getResult();
     }
