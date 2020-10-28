@@ -12,7 +12,9 @@
                 <div class="col-md-4">
                     <h1>{{ voiture.intitule }}</h1>
                     <h3>Statut : {{ voiture.etat }}</h3>
-                    <a href="#" class="btn btn-primary"> Louer</a>
+                    {% if app.user %}
+                    <a href="{{ path('voiture.louer',{id:voiture.id, slug:voiture.slug})}}" class="btn btn-primary"> Louer</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -47,6 +49,7 @@
 
     </div>
 </div>
+
 {% endblock %}
 
 

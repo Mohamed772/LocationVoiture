@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -42,6 +44,16 @@ class User implements UserInterface,\Serializable
      * @ORM\Column(type="string", length=255)
      */
     private $username;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Facturation::class, mappedBy="idu")
+     */
+    private $idv;
+
+    public function __construct()
+    {
+        $this->idv = new ArrayCollection();
+    }
 
 
 
@@ -142,5 +154,40 @@ class User implements UserInterface,\Serializable
         $this->username = $username;
 
         return $this;
+    }
+
+    /**
+     * @return Collection|Facturation[]
+     */
+    public function getIdv(): Collection
+    {
+        return $this->idv;
+    }
+
+    public function addIdv(Facturation $idv): self
+    {
+        if (!$this->idv->contains($idv)) {
+            $this->idv[] = $idv;
+            $idv->setIdu($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIdv(Facturation $idv): self
+    {
+        if ($this->idv->contains($idv)) {
+            $this->idv->removeElement($idv);
+            // set the owning side to null (unless already changed)
+            if ($idv->getIdu() === $this) {
+                $idv->setIdu(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __toString():string
+    {
+        return $this->nom;
     }
 }

@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Cocur\Slugify\Slugify;
 use App\Repository\VoitureRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -66,6 +68,16 @@ class Voiture
      * @ORM\Column(type="string", length=255)
      */
     private $constructeur;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Facturation::class, mappedBy="idv")
+     */
+    private $facturations;
+
+    public function __construct()
+    {
+        $this->facturations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -176,5 +188,40 @@ class Voiture
         $this->constructeur = $constructeur;
 
         return $this;
+    }
+
+    /**
+     * @return Collection|Facturation[]
+     */
+    public function getFacturations(): Collection
+    {
+        return $this->facturations;
+    }
+
+    public function addFacturation(Facturation $facturation): self
+    {
+        if (!$this->facturations->contains($facturation)) {
+            $this->facturations[] = $facturation;
+            $facturation->setIdv($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFacturation(Facturation $facturation): self
+    {
+        if ($this->facturations->contains($facturation)) {
+            $this->facturations->removeElement($facturation);
+            // set the owning side to null (unless already changed)
+            if ($facturation->getIdv() === $this) {
+                $facturation->setIdv(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __toString():string
+    {
+        return $this->intitule;
     }
 }

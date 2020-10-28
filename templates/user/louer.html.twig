@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+ {% block title voiture.intitule %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="{{ asset(voiture.photo) }}" class="card-img-top" alt="...">
+                </div>
+                <div class="col-md-4">
+                    <h1>{{ voiture.intitule }}</h1>
+                    <h3>Statut : {{ voiture.etat }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4 mb-4">
+        {{ form_start(form) }}
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Caractéristiques</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Constructeur</td>
+                        <td>{{ voiture.constructeur }}</td>
+                    </tr>
+                    <tr>
+                        <td>Moteur</td>
+                        <td>{{ voiture.moteurType }}</td>
+                    </tr>
+                    <tr>
+                        <td>Boite de vitesse</td>
+                        <td>{{ voiture.vitesseType }}</td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div class="col-md-4">
+                <h2>Durée</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Début</td>
+                        <td>{{ form_row(form.dateD) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Fin</td>
+                        <td>{{ form_row(form.dateF) }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <h2>Payement</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Payer ?</td>
+                        <td>{{ form_row(form.paye) }}</td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+
+        <button class="btn btn-success">Louer</button>
+        {{ form_end(form) }}
+    </div>
+
+
+
+
+{% endblock %}
+
+
+
