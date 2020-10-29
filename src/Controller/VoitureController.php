@@ -26,15 +26,10 @@ class VoitureController extends AbstractController
      * @var ObjectManager
      */
     private $em;
-    /**
-     * @var UserRepository
-     */
-    private $userRep;
 
-    public function __construct(VoitureRepository $repository, ObjectManager $em, UserRepository $userRep){
+    public function __construct(VoitureRepository $repository, ObjectManager $em){
         $this->repository = $repository;
         $this->em = $em;
-        $this->userRep = $userRep;
 
     }
     /**

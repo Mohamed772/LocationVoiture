@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Mon Profil</h1>
+            <h2>{{ user.nom }}</h2>
+
+        </div>
+    </div>
+
+    <div class="container mt-4">
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Informations personnelles</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Nom</td>
+                        <td>{{ user.nom }}</td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>Nom d'utilisation</td>
+                        <td>@{{ user.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>Mot de passe crypté</td>
+                        <td>{{ user.password }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <h2>Sécurité</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Role</td>
+                        <td>{% for role in user.roles %}<b>{{ role }}</b> {% endfor %}</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block title 'Mon profil'%}
+
+

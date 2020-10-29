@@ -20,16 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="users">
-      <change afterPath="$PROJECT_DIR$/src/Entity/Facturation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FacturationType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/FacturationRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/louer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/98b9568d-85fc-4ee5-b0f3-3ace96fdbbc2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/98b9568d-85fc-4ee5-b0f3-3ace96fdbbc2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/VoitureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/VoitureController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Voiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Voiture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Voiture/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Voiture/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,11 +250,12 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="457" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1603620799856" />
-    <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603885106258">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603949486602">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="458" y="192" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.821@0.23.1440.821" timestamp="1603048430198" />
     <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.826@0.23.1440.826" timestamp="1603885106258" />
+    <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.827@0.23.1440.827" timestamp="1603949486602" />
     <state x="143" y="90" key="DiffContextDialog" timestamp="1603356170065">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
@@ -279,6 +276,10 @@
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="221" y="69" key="SettingsEditor/0.23.1440.814@0.23.1440.814" timestamp="1602668975771" />
+    <state width="774" height="445" key="SwitcherDM" timestamp="1603949906700">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="774" height="445" key="SwitcherDM/0.23.1440.827@0.23.1440.827" timestamp="1603949906700" />
     <state x="319" y="170" key="Vcs.Push.Dialog.v2" timestamp="1603356171686">
       <screen x="0" y="23" width="1440" height="823" />
     </state>

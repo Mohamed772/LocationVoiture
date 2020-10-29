@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -130,6 +131,10 @@ class User implements UserInterface,\Serializable
         return $this;
     }
 
+    public function getSlug() : string
+    {
+        return (new Slugify())->slugify($this->nom);
+    }
     public function serialize()
     {
         return serialize([
