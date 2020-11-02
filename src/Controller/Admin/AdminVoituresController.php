@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Voiture;
 use App\Form\VoitureType;
+use App\Repository\FacturationRepository;
 use App\Repository\VoitureRepository;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,21 +23,29 @@ class AdminVoituresController extends AbstractController{
      * @var ObjectManager
      */
     private $em;
+    /**
+     * @var FacturationRepository
+     */
+    private $facturationRepository;
 
-    public function __construct(VoitureRepository $repository, ObjectManager $em)
+    public function __construct(VoitureRepository $repository, ObjectManager $em, FacturationRepository $facturationRepository)
     {
         $this->repository = $repository;
         $this->em = $em;
+        $this->facturationRepository = $facturationRepository;
     }
 
     /**
-     * @Route("/admin", name="admin.voiture.index")
+     * @Route("/admin", name="admin.index")
      * @return Response
      */
     public function index()
     {
         $voitures = $this->repository->findAll();
-        return $this->render('admin/voiture/index.html.twig', compact('voitures'));
+        $factures = $this->facturationRepository->findAll();
+        return $this->render('admin/index.html.twig', ['voitures'=>$voitures,
+            'factures'=>$factures
+        ]);
     }
 
     /**
@@ -52,7 +61,7 @@ class AdminVoituresController extends AbstractController{
             $this->em->persist($voiture);
             $this->em->flush();
             $this->addFlash('success','Voiture créé avec succès');
-            return $this->redirectToRoute('admin.voiture.index');
+            return $this->redirectToRoute('admin.index');
         }
         return $this->render('admin/voiture/new.html.twig', [
             'voiture'=> $voiture,
@@ -73,7 +82,7 @@ class AdminVoituresController extends AbstractController{
         if ($form->isSubmitted()&& $form->isValid()){
             $this->em->flush();
             $this->addFlash('success','Voiture modifié avec succès');
-            return $this->redirectToRoute('admin.voiture.index');
+            return $this->redirectToRoute('admin.index');
         }
         return $this->render('admin/voiture/edit.html.twig', [
             'voiture'=> $voiture,
@@ -94,6 +103,6 @@ class AdminVoituresController extends AbstractController{
             $this->em->flush();
             $this->addFlash('success','Voiture supprimé avec succès');
         }
-        return $this->redirectToRoute('admin.voiture.index');
+        return $this->redirectToRoute('admin.index');
     }
 }

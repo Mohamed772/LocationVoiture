@@ -3,6 +3,10 @@
 namespace App\Entity;
 
 use App\Repository\FacturationRepository;
+use App\Repository\UserRepository;
+use App\Repository\VoitureRepository;
+use Cocur\Slugify\Slugify;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -48,6 +52,7 @@ class Facturation
      * @ORM\Column(type="boolean")
      */
     private $paye;
+
 
     public function getId(): ?int
     {
@@ -124,5 +129,9 @@ class Facturation
         $this->paye = $paye;
 
         return $this;
+    }
+    public function getSlug() : string
+    {
+        return (new Slugify())->slugify($this->getId());
     }
 }

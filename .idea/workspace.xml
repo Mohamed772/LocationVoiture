@@ -20,11 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="users">
-      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminFacturationsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FacturationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Facturation/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_20_10_2020_12_49_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_20_10_2020_12_49__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/VoitureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/VoitureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminVoituresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminVoituresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Facturation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Facturation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/voiture/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,6 +176,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/LocationVoiture" />
     </key>
@@ -250,12 +255,13 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="457" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1603620799856" />
-    <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603949486602">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604322627591">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="458" y="192" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.821@0.23.1440.821" timestamp="1603048430198" />
     <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.826@0.23.1440.826" timestamp="1603885106258" />
     <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.827@0.23.1440.827" timestamp="1603949486602" />
+    <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.828@0.23.1440.828" timestamp="1604322627591" />
     <state x="143" y="90" key="DiffContextDialog" timestamp="1603356170065">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
@@ -264,14 +270,15 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="307" y="172" key="IDE.errors.dialog/0.23.1440.823@0.23.1440.823" timestamp="1603360665259" />
-    <state x="539" y="365" key="NewPhpFileDialog" timestamp="1603884041232">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="539" y="366" key="NewPhpFileDialog" timestamp="1604319466710">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="539" y="360" key="NewPhpFileDialog/0.23.1440.814@0.23.1440.814" timestamp="1602671074123" />
     <state x="539" y="364" key="NewPhpFileDialog/0.23.1440.823@0.23.1440.823" timestamp="1603357550857" />
     <state x="539" y="365" key="NewPhpFileDialog/0.23.1440.825@0.23.1440.825" timestamp="1602749046989" />
     <state x="539" y="365" key="NewPhpFileDialog/0.23.1440.826@0.23.1440.826" timestamp="1603884041232" />
     <state x="539" y="366" key="NewPhpFileDialog/0.23.1440.827@0.23.1440.827" timestamp="1603117691248" />
+    <state x="539" y="366" key="NewPhpFileDialog/0.23.1440.828@0.23.1440.828" timestamp="1604319466710" />
     <state x="221" y="69" key="SettingsEditor" timestamp="1602668975771">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
@@ -302,17 +309,22 @@
     </state>
     <state x="518" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1602672218705" />
     <state x="518" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.825@0.23.1440.825" timestamp="1603802649289" />
-    <state x="343" y="101" width="870" height="676" key="find.popup" timestamp="1603911245941">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="334" y="174" width="870" height="678" key="find.popup" timestamp="1604318268325">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="343" y="85" width="718" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1603120066323" />
     <state x="343" y="101" width="870" height="673" key="find.popup/0.23.1440.823@0.23.1440.823" timestamp="1603620633211" />
     <state x="343" y="101" width="870" height="674" key="find.popup/0.23.1440.825@0.23.1440.825" timestamp="1603802381767" />
     <state x="343" y="101" width="870" height="676" key="find.popup/0.23.1440.827@0.23.1440.827" timestamp="1603911245941" />
+    <state x="334" y="174" width="870" height="678" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1604318268325" />
     <state width="600" height="429" key="javadoc.popup" timestamp="1603905756995">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1440.826@0.23.1440.826" timestamp="1602969854707" />
     <state width="600" height="429" key="javadoc.popup/0.23.1440.827@0.23.1440.827" timestamp="1603905756995" />
+    <state x="384" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1604318094932">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="384" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1604318094932" />
   </component>
 </project>

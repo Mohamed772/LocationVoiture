@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+ {% block title facturation.getSlug %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+
+                </div>
+                <div class="col-md-4">
+                    <h1>{{ facturation.idu ~ " " ~ facturation.idv }}</h1>
+                    <h3>Statut de paiement :
+                        {% if facturation.paye %}
+                        payé
+                        {% else %}
+                        pas payé
+                        {% endif %}
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Infos</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Début</td>
+                        <td>{{ facturation.dateD.format('d/m/y') }}</td>
+                    </tr>
+                    <tr>
+                        <td>Fin</td>
+                        <td>{{ facturation.dateF.format('d/m/y') }}</td>
+                    </tr>
+                    <tr>
+                        <td>Prix</td>
+                        <td>{{ facturation.prix }}</td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
