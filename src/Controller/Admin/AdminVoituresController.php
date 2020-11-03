@@ -70,6 +70,7 @@ class AdminVoituresController extends AbstractController{
             'form'=> $form->createView()
         ]);
     }
+
     /**
      * @Route("/admin/voiture/{id}", name="admin.voiture.edit", methods="POST|GET")
      * @param Voiture $voiture

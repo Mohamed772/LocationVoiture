@@ -7,6 +7,7 @@ use App\Form\FacturationType;
 use App\Repository\FacturationRepository;
 use App\Repository\UserRepository;
 use App\Repository\VoitureRepository;
+use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,7 +45,7 @@ class VoitureController extends AbstractController
      * @param VoitureRepository $repository
      * @param FacturationRepository $facturationRepository
      * @return Response
-     * @throws \Doctrine\ORM\ORMException
+     * @throws ORMException
      */
     public function index(VoitureRepository $repository,FacturationRepository $facturationRepository): Response
     {
