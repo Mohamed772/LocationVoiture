@@ -52,6 +52,25 @@
 
         </div>
     </div>
+    <div class="container mt-4 mb-4">
+        <h1>Gerer les Factures</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Intitule</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for facture in factures %}
+                <tr>
+                    <td> <a href="{{ path('facturation.show',{id:facture.id, slug:facture.slug}) }}">{{ facture.id ~ ' ' ~ facture.idu.username ~ " " ~ facture.idv.intitule }}</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
 
 {% endblock %}
 

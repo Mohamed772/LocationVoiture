@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Facturation;
+use App\Entity\Voiture;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ObjectManager;
 
 /**
  * @method Facturation|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,9 +16,35 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class FacturationRepository extends ServiceEntityRepository
 {
+
+
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Facturation::class);
+    }
+
+    /**
+     * @param VoitureRepository $voitureRepository
+     * @throws \Doctrine\ORM\ORMException
+     */
+    public function  update(){
+        $factures = $this->findAll();
+        $datetime = new \DateTime('now');
+        $voitureRepository = $this->_em->getRepository(Voiture::class);
+
+        foreach ($factures as $f){
+            if ($datetime < $f->getDateF()){
+                $voitureRepository->find($f->getIdv())->setDisponible(false)
+                    ->setEtat("Opérationnel");
+            }else{
+                $voitureRepository->find($f->getIdv())->setDisponible(true)
+                    ->setEtat("Opérationnel");
+
+            }
+            $this->_em->persist($f);
+            $this->_em->flush();
+        }
     }
 
     // /**

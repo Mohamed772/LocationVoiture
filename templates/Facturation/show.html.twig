@@ -7,10 +7,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-
+                    <img src="{{ asset(facturation.idv.photo) }}" class="card-img-top" alt="...">
                 </div>
                 <div class="col-md-4">
-                    <h1>{{ facturation.idu ~ " " ~ facturation.idv }}</h1>
+                    <h1>{{ facturation.idu ~ " | " ~ facturation.idv }}</h1>
                     <h3>Statut de paiement :
                         {% if facturation.paye %}
                         payé

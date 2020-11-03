@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="container mt-4">
-        <h1>Gerer les biens</h1>
+        <h1>Gerer les Voitures</h1>
 
         {% for message in app.flashes('success') %}
             <div class="alert alert-success">
@@ -38,6 +38,38 @@
 
         <div class="text-right">
             <a href="{{ path('admin.voiture.new') }}" class="btn btn-info">Ajouter une nouvelle voiture</a>
+        </div>
+    </div>
+
+    <div class="container mt-4 mb-4">
+        <h1>Gerer les Factures</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Intitule</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for facture in factures %}
+                <tr>
+                    <td> <a href="{{ path('facturation.show',{id:facture.id, slug:facture.slug}) }}">{{ facture.id ~ ' ' ~ facture.idu.username ~ " " ~ facture.idv.intitule }}</a></td>
+                    <td> <a href="{{ path('admin.facturation.edit', {id: facture.id}) }}" class="btn btn-primary">Editer</a>
+                        <form method="POST" action="{{ path('admin.facturation.delete', {id: facture.id}) }}"
+                              style="display: inline-block" onsubmit="return confirm('Êtes vous vraiment sûr ?')">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('deleteF'~ facture.id) }}">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="text-right">
+            <a href="{{ path('admin.facturation.new') }}" class="btn btn-info">Ajouter une nouvelle facture</a>
         </div>
     </div>
 

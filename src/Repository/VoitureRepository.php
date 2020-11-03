@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Facturation;
 use App\Entity\Voiture;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -25,6 +26,7 @@ class VoitureRepository extends ServiceEntityRepository
      */
     public function findAllVisible(): array
     {
+
         return $this->createQueryBuilder('v')
             ->Where('v.disponible = :val')
             ->setParameter('val', true)

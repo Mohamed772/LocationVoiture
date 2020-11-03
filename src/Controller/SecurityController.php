@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\FacturationRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,7 +32,7 @@ class SecurityController extends AbstractController{
      * @return Response
      * @Route("/user/{slug}-{id}", name="user.show", requirements={"slug": "[a-z0-9\-]*"})
      */
-    public function show($slug,User $user): Response
+    public function show(FacturationRepository $facturationRepository,$slug,User $user): Response
     {
         if ($user->getSlug() !== $slug){
             return $this->redirectToRoute('user.show', [
@@ -39,8 +40,11 @@ class SecurityController extends AbstractController{
                 'slug' => $user->getSlug()
             ], 301);
         }
+
+        $factures = $facturationRepository->findBy(['idu'=>$user->getId()]);
         return $this->render("user/show.html.twig",[
             'user'=> $user,
+            'factures'=> $factures,
             'current_menu' => 'users'
         ]);
 

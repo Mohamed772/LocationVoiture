@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Entity\Facturation;
 use App\Entity\Voiture;
 use App\Form\FacturationType;
+use App\Repository\FacturationRepository;
 use App\Repository\UserRepository;
 use App\Repository\VoitureRepository;
 use Doctrine\Persistence\ObjectManager;
@@ -26,18 +27,28 @@ class VoitureController extends AbstractController
      * @var ObjectManager
      */
     private $em;
+    /**
+     * @var FacturationRepository
+     */
+    private $facturationRepository;
 
-    public function __construct(VoitureRepository $repository, ObjectManager $em){
+    public function __construct(VoitureRepository $repository, ObjectManager $em,FacturationRepository $facturationRepository){
         $this->repository = $repository;
         $this->em = $em;
 
+        $this->facturationRepository = $facturationRepository;
     }
+
     /**
      * @Route("/voitures",name="voiture.index")
+     * @param VoitureRepository $repository
+     * @param FacturationRepository $facturationRepository
      * @return Response
+     * @throws \Doctrine\ORM\ORMException
      */
-    public function index(VoitureRepository $repository): Response
+    public function index(VoitureRepository $repository,FacturationRepository $facturationRepository): Response
     {
+        $facturationRepository->update();
         $voitures = $repository->findAllVisible();
         return $this->render("Voiture/index.html.twig",[
             'current_menu' => 'voitures',
@@ -65,6 +76,9 @@ class VoitureController extends AbstractController
 
     /**
      * @route ("/voitures/{slug}-{id}/louer", name="voiture.louer", requirements={"slug": "[a-z0-9\-]*"})
+     * @param Request $request
+     * @param $slug
+     * @param Voiture $voiture
      * @return Response
      */
     public function louer(Request $request, $slug,Voiture $voiture): Response
@@ -84,7 +98,7 @@ class VoitureController extends AbstractController
         if ($form->isSubmitted()&& $form->isValid()){
             $facture->setIdu($this->getUser());
             $facture->setIdv($voiture);
-            $facture->setPrix(12344);
+            $facture->setPrix(30* (int)date_diff($facture->getDateD() , $facture->getDateF())->format("%a"));
             $this->em->persist($facture);
             $this->em->flush();
             $this->addFlash('success','Facture créé avec succès');

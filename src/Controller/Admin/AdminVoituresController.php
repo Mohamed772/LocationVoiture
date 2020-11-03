@@ -50,6 +50,8 @@ class AdminVoituresController extends AbstractController{
 
     /**
      * @Route("/admin/voiture/create", name="admin.voiture.new")
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function new(Request $request)
     {
