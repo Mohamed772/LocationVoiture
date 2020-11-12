@@ -16,7 +16,7 @@ class HomeController extends AbstractController
      */
     public function index(VoitureRepository $repository): Response
     {
-        $voitures = $repository->finLastest();
+        $voitures = $repository->findLastest();
         return $this->render('pages/home.html.twig',['voitures'=>$voitures]);
     }
 

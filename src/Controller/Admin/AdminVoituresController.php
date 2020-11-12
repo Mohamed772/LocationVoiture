@@ -102,6 +102,10 @@ class AdminVoituresController extends AbstractController{
     public function delete(Voiture $voiture, Request $request)
     {
         if($this->isCsrfTokenValid('delete'. $voiture->getId(), $request->get('_token'))){
+            foreach ($voiture->getFacturations() as $f){
+                $this->em->remove($f);
+            }
+
             $this->em->remove($voiture);
             $this->em->flush();
             $this->addFlash('success','Voiture supprimé avec succès');

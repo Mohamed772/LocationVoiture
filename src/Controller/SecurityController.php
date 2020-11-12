@@ -64,7 +64,6 @@ class SecurityController extends AbstractController{
             'factures'=> $factures,
             'current_menu' => 'users'
         ]);
-
     }
 
     /**

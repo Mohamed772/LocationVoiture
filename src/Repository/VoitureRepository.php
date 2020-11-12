@@ -26,7 +26,6 @@ class VoitureRepository extends ServiceEntityRepository
      */
     public function findAllVisible(): array
     {
-
         return $this->createQueryBuilder('v')
             ->Where('v.disponible = :val')
             ->setParameter('val', true)
@@ -37,7 +36,7 @@ class VoitureRepository extends ServiceEntityRepository
     /**
      * @return Voiture[]
      */
-    public function finLastest(): array
+    public function findLastest(): array
     {
         return $this->createQueryBuilder('v')
             ->Where('v.disponible = :val')

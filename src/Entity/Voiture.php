@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=VoitureRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\VoitureRepository", repositoryClass=VoitureRepository::class)
  */
 class Voiture
 {
@@ -224,4 +224,7 @@ class Voiture
     {
         return $this->intitule;
     }
+
+
+
 }

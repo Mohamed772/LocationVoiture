@@ -20,12 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="users">
-      <change afterPath="$PROJECT_DIR$/templates/security/signup.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201112203742.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201112220901.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201112221052.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/fondecran1-5fadac1145a81784450970.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LocationVoiture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LocationVoiture.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/98b9568d-85fc-4ee5-b0f3-3ace96fdbbc2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/98b9568d-85fc-4ee5-b0f3-3ace96fdbbc2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f90b8fba-48b2-4c20-9c1c-094016973286.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f90b8fba-48b2-4c20-9c1c-094016973286/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminFacturationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminFacturationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminVoituresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminVoituresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/VoitureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/VoitureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Voiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Voiture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/FacturationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/FacturationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VoitureRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VoitureRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +167,8 @@
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
     </include_path>
   </component>
   <component name="ProjectId" id="1irc3MdvIoUW3KQFzEdg2aebEPA" />
@@ -187,6 +206,7 @@
       <updated>1602668951248</updated>
       <workItem from="1602668952529" duration="16754000" />
       <workItem from="1602975684328" duration="18074000" />
+      <workItem from="1605202837629" duration="13213000" />
     </task>
     <task id="LOCAL-00001" summary="Premiere page">
       <created>1602672247151</created>
@@ -239,9 +259,10 @@
     </state>
     <state x="320" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.814@0.23.1440.814" timestamp="1602669513496" />
     <state x="320" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.823@0.23.1440.823" timestamp="1603356342375" />
-    <state x="522" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1604402513796">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="522" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1605218872520">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="522" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605218872520" />
     <state x="522" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.823@0.23.1440.823" timestamp="1603357277567" />
     <state x="522" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.827@0.23.1440.827" timestamp="1604402513796" />
     <state x="456" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603186667078">
@@ -298,26 +319,28 @@
     </state>
     <state x="458" y="242" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.23.1440.821@0.23.1440.821" timestamp="1603045389565" />
     <state x="458" y="243" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.23.1440.823@0.23.1440.823" timestamp="1603362162330" />
-    <state x="561" y="218" width="500" height="547" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603879807348">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="561" y="213" width="500" height="547" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605219117915">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="561" y="213" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1605219117915" />
     <state x="561" y="218" width="500" height="547" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.825@0.23.1440.825" timestamp="1603879807348" />
     <state x="518" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603802649289">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="518" y="351" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1602672218705" />
     <state x="518" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.825@0.23.1440.825" timestamp="1603802649289" />
-    <state x="343" y="101" width="870" height="676" key="find.popup" timestamp="1604407272218">
+    <state x="343" y="101" width="870" height="676" key="find.popup" timestamp="1605204675569">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="343" y="85" width="718" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1603120066323" />
     <state x="343" y="101" width="870" height="673" key="find.popup/0.23.1440.823@0.23.1440.823" timestamp="1603620633211" />
     <state x="343" y="101" width="870" height="674" key="find.popup/0.23.1440.825@0.23.1440.825" timestamp="1603802381767" />
-    <state x="343" y="101" width="870" height="676" key="find.popup/0.23.1440.827@0.23.1440.827" timestamp="1604407272218" />
+    <state x="343" y="101" width="870" height="676" key="find.popup/0.23.1440.827@0.23.1440.827" timestamp="1605204675569" />
     <state x="334" y="174" width="870" height="678" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1604318268325" />
-    <state width="600" height="429" key="javadoc.popup" timestamp="1603905756995">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state width="600" height="467" key="javadoc.popup" timestamp="1605207619081">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="600" height="467" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1605207619081" />
     <state width="600" height="428" key="javadoc.popup/0.23.1440.826@0.23.1440.826" timestamp="1602969854707" />
     <state width="600" height="429" key="javadoc.popup/0.23.1440.827@0.23.1440.827" timestamp="1603905756995" />
     <state x="384" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1604318094932">

@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Facturation;
 use App\Form\FacturationTypeAllType;
+use App\Repository\VoitureRepository;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -78,10 +79,13 @@ class AdminFacturationsController extends AbstractController{
      * @param Request $request
      * @return RedirectResponse
      */
-    public function delete(Facturation $facture, Request $request)
+    public function delete(Facturation $facture, Request $request, VoitureRepository $voitureRepository)
     {
         if($this->isCsrfTokenValid('deleteF'. $facture->getId(), $request->get('_token'))){
+            $voiture = $voitureRepository->find($facture->getIdv());
+            $voiture->setDisponible(true);
             $this->em->remove($facture);
+            $this->em->persist($voiture);
             $this->em->flush();
             $this->addFlash('success','Facturation supprimé avec succès');
         }

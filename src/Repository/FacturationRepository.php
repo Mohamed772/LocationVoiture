@@ -34,14 +34,19 @@ class FacturationRepository extends ServiceEntityRepository
         $voitureRepository = $this->_em->getRepository(Voiture::class);
 
         foreach ($factures as $f){
-            if ($datetime < $f->getDateF()){
-                $voitureRepository->find($f->getIdv())->setDisponible(false)
+            $voiture = $voitureRepository->find($f->getIdv());
+            if ($datetime < $f->getDateD()){
+                $voiture->setDisponible(true)
                     ->setEtat("Opérationnel");
             }else{
-                $voitureRepository->find($f->getIdv())->setDisponible(true)
+                if ($datetime < $f->getDateF()){
+                    $voiture->setDisponible(false)
+                        ->setEtat("Opérationnel");
+                }else{$voiture->setDisponible(true)
                     ->setEtat("Opérationnel");
-
+                }
             }
+            $this->_em->persist($voiture);
             $this->_em->persist($f);
             $this->_em->flush();
         }
