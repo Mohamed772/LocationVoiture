@@ -20,29 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e3d59-a429-46db-b294-a3bd1a0acea1" name="Default Changelist" comment="users">
-      <change afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201112203742.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201112220901.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201112221052.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/photos/fondecran1-5fadac1145a81784450970.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LocationVoiture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LocationVoiture.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/98b9568d-85fc-4ee5-b0f3-3ace96fdbbc2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/98b9568d-85fc-4ee5-b0f3-3ace96fdbbc2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f90b8fba-48b2-4c20-9c1c-094016973286.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f90b8fba-48b2-4c20-9c1c-094016973286/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminFacturationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminFacturationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminVoituresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminVoituresController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Voiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Voiture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/FacturationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/FacturationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/VoitureRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VoitureRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/VoitureType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/VoitureType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/voiture/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/voiture/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +187,7 @@
       <updated>1602668951248</updated>
       <workItem from="1602668952529" duration="16754000" />
       <workItem from="1602975684328" duration="18074000" />
-      <workItem from="1605202837629" duration="13213000" />
+      <workItem from="1605202837629" duration="15302000" />
     </task>
     <task id="LOCAL-00001" summary="Premiere page">
       <created>1602672247151</created>
@@ -319,10 +300,10 @@
     </state>
     <state x="458" y="242" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.23.1440.821@0.23.1440.821" timestamp="1603045389565" />
     <state x="458" y="243" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.23.1440.823@0.23.1440.823" timestamp="1603362162330" />
-    <state x="561" y="213" width="500" height="547" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605219117915">
+    <state x="474" y="362" width="498" height="538" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605219955133">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="561" y="213" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1605219117915" />
+    <state x="474" y="362" width="498" height="538" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1605219955133" />
     <state x="561" y="218" width="500" height="547" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.825@0.23.1440.825" timestamp="1603879807348" />
     <state x="518" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603802649289">
       <screen x="0" y="23" width="1440" height="825" />

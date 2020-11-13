@@ -929,11 +929,7 @@ SELECT|sys.sys_config:null
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="270" parent="238" name="updated_at">
-      <Position>9</Position>
-      <DataType>datetime|0s</DataType>
-    </column>
-    <key id="271" parent="238" name="PRIMARY">
+    <key id="270" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
